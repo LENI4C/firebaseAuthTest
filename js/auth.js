@@ -1,5 +1,6 @@
 // Firebase Module Imports
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -20,9 +21,18 @@ const getEl = (uid) => document.querySelector(uid);
 const getElVal = (uid) => document.querySelector(uid).value;
 
 // Form elements
-const userName = getElVal("#user-name");
-const email = getElVal("#email");
-const pwd = getElVal("#pwd");
-const confirmPwd = getElVal("#confirm-pwd");
+const form = getEl("form");
 const googleSignIn = getEl("#google-signin-btn");
-const submitBtn = getEl("#submit-btn")
+const submitBtn = getEl("#submit-btn");
+
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    
+    // Form data
+    const userName = getElVal("#user-name");
+    const email = getElVal("#email");
+    const pwd = getElVal("#pwd");
+    const confirmPwd = getElVal("#confirm-pwd");
+
+});
