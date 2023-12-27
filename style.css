@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    color: beige;
+    font-size: calc(1em + .1vw);
+    background-image: linear-gradient(45deg, hsl(330, 100%, 71%), hsl(263, 55%, 50%));
+}

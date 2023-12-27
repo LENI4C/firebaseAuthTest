@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    font-size: calc(1em + .1vw);
+    background-image: linear-gradient(45deg, hsl(330, 100%, 71%), hsl(263, 55%, 50%));
+}
+
+form {
+    border-radius: 1em;
+    padding: 1.5em;
+    width: min(600px, 80vw);
+    height: max-content;
+    background-color: hsl(234.15, 38.32%, 20.98%);
+    box-shadow: 2px 3px 8px rgb(23, 23, 23),
+    -2px -3px 12px rgb(94, 88, 88);
+}
+
+/* EVERY REFERENCE OF [type=button] IS BECAUSE OF THE CHANGE OF TYPE IN THE LOGIN.HTML FILE */
+
+input:not([type=submit],[type=button]) {
+    display: block;
+    margin-block: 2em;
+    border: none;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    color: beige;
+    border-bottom: 1px solid hsl(0, 0%, 56%);
+    padding-block: .5em;
+    transition: .3s ease;
+}
+
+input:not([type=submit],[type=button]):is(:focus, :active) {
+    padding-left: .3em;
+}
+
+input::placeholder {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: rgb(101, 99, 99);
+}
+
+[type=submit],
+[type=button] {
+    display: block;
+    margin: 1.5em auto;
+    cursor: pointer;
+    padding: .5em;
+    color: beige;
+    border: none;
+    border-radius: .3em;
+    font-weight: 800;
+    background-image: linear-gradient(45deg, hsl(330, 100%, 71%), hsl(263, 55%, 50%));
+}
+
+[type=submit]:is(:hover, :active),
+[type=button]:is(:hover, :active) {
+    font-size: 1em;
+    padding-inline: 1.3em;
+}
+
+a {
+    color: beige;
+    display: block;
+    text-align: center;
+}
+
+a, 
+[type=submit],
+[type=button] {
+    transition: .5s ease;
+}
+
+a:is(:hover, :active) {
+    font-size: 1.2em;
+} 
+
+/* STYLING FOR LOGIN.HTML ONLY */
+.end-text {
+    gap: .3em;
+    display: flex;
+    justify-content: center;
+}

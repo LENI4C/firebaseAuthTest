@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Log In</title>
+</head>
+<body>
+    <form>
+        <h1>Hello there, <br> welcome back</h1>
+        <!-- <input type="text" name="user-name" id="user-name" placeholder="Username" autocomplete="on"> -->
+        <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="on">
+        <input type="password" name="pwd" id="pwd" placeholder="Enter Password">
+        <!-- <input type="password" name="confirm-pwd" id="confirm-pwd" placeholder="Confirm Password"> -->
+        <input type="button" value="Log In" id="login-btn">
+        <input type="button" value="Sign in with Google" id="google-signin-btn">
+        <div class="end-text">
+            <span>New here?</span>
+            <a href="register.html"> Sign Up instead</a>
+        </div>
+    </form>
+
+    <script type="module" src="/js/auth.js"></script>
+    <script type="module" src="/js/login.js"></script>
+</body>
+</html>
